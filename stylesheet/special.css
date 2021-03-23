@@ -1,0 +1,26 @@
+#dropdown {
+  display: none;
+}
+.swiper-scrollbar {
+  width: 24% !important;
+  background: black !important;
+  z-index: 1 !important;
+}
+.swiper-container-horizontal > .swiper-scrollbar {
+  left: 0 !important;
+  top: 1rem !important;
+}
+#molispecial-breadcrum {
+  background-image: url("../assets/banner-molispecial.png");
+  background-size: cover;
+}
+#molispecial-text span {
+  text-shadow: 4px 4px black;
+}
+.swiper-scrollbar-drag {
+  background: red !important;
+}
+#molispecial-post-bg {
+    background-image: url('../assets/molispecial-bg.png');
+    background-size: cover;
+}

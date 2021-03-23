@@ -1,0 +1,12 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+@font-face {
+    font-family: 'san_francisco_text_regularRg';
+    src: url('sanfranciscotext-regular-webfont.woff2') format('woff2'),
+         url('sanfranciscotext-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}

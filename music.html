@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./stylesheet/index.css" />
+    <link rel="stylesheet" href="./stylesheet/custom.css" />
+    <link href="./lib/font-awesome-pro-5.15.2/css/all.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="./lib/swiper/swiper-bundle.css" />
+    <link rel="stylesheet" href="./lib/swiper/swiper-bundle.min.css" />
+
+    <title>Molistar</title>
+</head>
+
+<body class="overflow-x-hidden">
+    <!-- Trending -->
+    <section class="fixed top-0 bg-molistar-red w-full z-50">
+        <div class="container mx-auto">
+            <div class="flex justify-between items-center">
+                <div class="flex gap-5 items-center justify-center py-2 text-xs">
+                    <img src="./assets/icon-trending-up.svg" alt="" />
+                    <p
+                        class="rounded-full border-2 p-1 px-2 text-white hover:text-molistar-red hover:bg-white transition duration 150 cursor-pointer">
+                        #Bố già 2021
+                    </p>
+                    <p
+                        class="rounded-full border-2 p-1 px-2 text-white hover:text-molistar-red hover:bg-white transition duration 150 cursor-pointer">
+                        #Đại hội pass đồ bạc tỉ của Ngọc Trinh
+                    </p>
+                </div>
+                <div class="flex gap-2 text-xs">
+                    <div
+                        class="flex gap-2 items-center p-3 group hover:bg-black hover:text-white transition-all duration-150">
+                        <img src="./assets/icon-bookmark-heart.svg" alt="" />
+                        <a href="./special.html" class="font-bold text-white">MOLI SPECIAL</a>
+                    </div>
+                    <div
+                        class="flex gap-2 items-center p-3 group hover:bg-black hover:text-white transition-all duration-150">
+                        <img src="./assets/icon-star.svg" alt="" />
+                        <a href="" class="font-bold text-white">MOLI STAR</a>
+                    </div>
+                    <div
+                        class="flex gap-2 items-center p-3 group hover:bg-black hover:text-white transition-all duration-150">
+                        <img src="./assets/icon-hot.svg" alt="" />
+                        <a href="" class="font-bold text-white">TIN HOT</a>
+                    </div>
+                    <div
+                        class="flex gap-2 items-center p-3 group hover:bg-black hover:text-white transition-all duration-150">
+                        <img src="./assets/icon-news.svg" alt="" />
+                        <a href="" class="font-bold text-white">TIN MỚI</a>
+                    </div>
+                    <div class="flex items-center relative">
+                        <input id="searchBar" type="text" class="absolute mt-7">
+                        <img class="cursor-pointer" onclick="searchToggle()" src="./assets/icon-search.svg" alt="" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bg-white p-4">
+            <div class="container mx-auto">
+                <div class="flex gap-5 items-center justify-between">
+                    <a href="./index.html"><img src="./assets/logo.png" alt="" /></a>
+                    <a href="" class="font-bold text-xl hover:text-molistar-red transition duration-150"><span
+                            class="text-base transform transition-all duration-150 hover:border-b-2 hover:border-molistar-red">STAR</span></a>
+                    <a href="" class="font-bold text-xl hover:text-molistar-red transition duration-150"><span
+                            class="text-base transform transition-all duration-150 hover:border-b-2 hover:border-molistar-red">CINE</span></a>
+                    <a href="./music.html"
+                        class="font-bold text-xl hover:text-molistar-red transition duration-150"><span
+                            class="text-base transform transition-all duration-150 hover:border-b-2 hover:border-molistar-red">MUSIC</span></a>
+                    <a href="" class="font-bold text-xl hover:text-molistar-red transition duration-150"><span
+                            class="text-base transform transition-all duration-150 hover:border-b-2 hover:border-molistar-red">FASHION</span></a>
+                    <a href="./startalk.html"
+                        class="font-bold text-xl hover:text-molistar-red transition duration-150"><span
+                            class="text-base transform transition-all duration-150 hover:border-b-2 hover:border-molistar-red">STAR
+                            TALK</span></a>
+                    <a href="" class="font-bold text-xl hover:text-molistar-red transition duration-150"><span
+                            class="text-base transform transition-all duration-150 hover:border-b-2 hover:border-molistar-red">ĐỜI
+                            SỐNG</span></a>
+                    <a href="" class="font-bold text-xl hover:text-molistar-red transition duration-150"><span
+                            class="text-base transform transition-all duration-150 hover:border-b-2 hover:border-molistar-red">THỂ
+                            THAO</span></a>
+                    <button><img onclick="dropdownToggle()" src="./assets/icon-red-3dots.svg" alt="" /></button>
+                </div>
+
+            </div>
+
+        </div>
+        <!-- dropdown -->
+        <section class="bg-molistar-darkgrey" id="dropdown">
+            <div class="container mx-auto">
+                <div class="grid grid-cols-7 py-10 border-b-2 border-black">
+                    <div>
+                        <ul class="text-white font-bold">
+                            <li>MOLI SPECIAL</li>
+                            <li>MOLI STAR</li>
+                            <li>STAR TALK</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <span class="text-white border-b-2 border-molistar-red pb-1">STAR</span>
+                        <ul class="text-gray-300 pt-5">
+                            <li>Hậu trường</li>
+                            <li>Paparazi</li>
+                            <li>TV Shows</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <span class="text-white border-b-2 border-molistar-red pb-1">CINE</span>
+                        <ul class="text-gray-300 pt-5">
+                            <li>Điện ảnh</li>
+                            <li>Truyền hình</li>
+                            <li>Web drama</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <span class="text-white border-b-2 border-molistar-red pb-1">MUSIC</span>
+                        <ul class="text-gray-300 pt-5">
+                            <li>V-POP</li>
+                            <li>K-POP</li>
+                            <li>Âu Mỹ</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <span class="text-white border-b-2 border-molistar-red pb-1">FASHION</span>
+                        <ul class="text-gray-300 pt-5">
+                            <li>Trends</li>
+                            <li>Beauty</li>
+                            <li>Streetstyle</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <span class="text-white border-b-2 border-molistar-red pb-1">ĐỜI SỐNG</span>
+                        <ul class="text-gray-300 pt-5">
+                            <li>Nhân vật</li>
+                            <li>Ăn chơi</li>
+                            <li>Du lịch</li>
+                            <li>"Giang cư mận"</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <span class="text-white border-b-2 border-molistar-red pb-1">THỂ THAO</span>
+                        <ul class="text-gray-300 pt-5">
+                            <li>Nhân vật</li>
+                            <li>Bản lề</li>
+                            <li>Bóng đá</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="flex justify-between py-8 w-full">
+                    <div class="flex flex-row items-center justify-center gap-5">
+                        <img src="./assets/footer-logo.png" class="w-full" alt="">
+
+                        <div class="p-2">
+                            <p class="text-white pr-4">HỢP TÁC NỘI DUNG</p>
+                            <p class="text-gray-400"> info@molistar.com</p>
+                        </div>
+                        <div>
+                            <p class="text-white">HỢP TÁC QUẢNG CÁO</p>
+                            <p class="text-gray-400">marketing@molistar.com</p>
+                            <p class="text-gray-400">0912 345 678</p>
+
+                        </div>
+                    </div>
+                    <div class="flex gap-5">
+                        <img src="./assets/icon-facebook.svg" alt="">
+                        <img src="./assets/icon-youtube.svg" alt="">
+                        <img src="./assets/icon-instagram.svg" alt="">
+                    </div>
+                </div>
+        </section>
+    </section>
+    </section>
+    <!-- Banner -->
+    <div class="bg-molistar-grey w-full mt-32">
+        <div class="container mx-auto flex justify-center w-full">
+            <div class="py-5 w-full">
+                <img src="./assets/banner-main.png" class="w-full" alt="" />
+            </div>
+        </div>
+    </div>
+    <!-- breadcrum -->
+    <section class="pt-10 pb-5">
+        <div class="container mx-auto flex justify-between items-center border-b-2">
+            <div class="pink-gradiant rounded-t-full py-3 relative">
+                <img src="./assets/category-music.png" class="absolute -top-0.85 overflow-hidden" alt="" />
+                <span class="font-bold text-3xl pl-20 pr-48">MUSIC</span>
+            </div>
+            <div class="flex gap-5">
+                <a href=""><span class="font-bold text-xl text-molistar-rail hover:text-molistar-red">V-POP</span></a>
+                <a href=""><span class="font-bold text-xl text-molistar-rail hover:text-molistar-red">K-POP</span></a>
+                <a href=""><span class="font-bold text-xl text-molistar-rail hover:text-molistar-red">ÂU MỸ</span></a>
+            </div>
+        </div>
+    </section>
+
+    <section class="w-full">
+        <div class="container mx-auto w-full">
+            <div class="gap-5 grid grid-cols-4">
+                <div class="col-span-3 headline-bg p-5 pl-0 gap-5 relative z-20 grid grid-cols-3">
+                    <div class="col-span-2 pl-5 pink-gradiant z-20">
+                        <img src="./assets/headlines-1.png" class="w-full" alt="" />
+                        <a href="">
+                            <h3 class="font-bold text-xl pt-2 line-clamp-2 hover:text-molistar-red">
+                                Khoảnh khắc "lạ miệng": JustaTee khuyên anh em nên vào xem vợ
+                                sinh, tự tay cắt dây rốn cho con
+                            </h3>
+                        </a>
+                        <p class="pt-2 text-xl">
+                            [Moli Star] Trúng ngàn điểm lô không bằng bác sĩ hô: "Vợ đẻ".
+                            Hành trình Trâm Anh nhà anh JustaTea đẻ được ghi lại từng khoảnh
+                            khắc...
+                        </p>
+                    </div>
+                    <div
+                        class="absolute -left-28 overflow-hidden mt-19 flex gap-2 py-4 px-6 text-2xl headline-sideway rounded-t-lg transform -rotate-90 z-10">
+                        <!-- <img src="./assets/icon-group.svg" alt=""> -->
+                        <span class="font-bold text-white">TIÊU ĐIỂM</span>
+                    </div>
+                    <div class="overflow-hidden">
+                        <div>
+                            <img src="./assets/headlines-2.png" class="w-full" alt="" />
+                            <a href="">
+                                <h3 class="font-bold text-lg line-clamp-2 mt-5 hover:text-molistar-red">
+                                    Nghệ sĩ Diễm Trinh: Không ai mời tôi đóng phim vì sợ giữa
+                                    chừng...
+                                </h3>
+                            </a>
+                        </div>
+                        <div class="pt-5">
+                            <img src="./assets/headlines-3.png" class="w-full" alt="" />
+                            <a href="">
+                                <h3 class="font-bold text-lg line-clamp-2 mt-5 hover:text-molistar-red">
+                                    Nghệ sĩ Mỹ Châu bật khóc, từng mong về nước đoàn tụ cùng
+                                    Lệ...
+                                </h3>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full">
+                    <img src="./assets/sideads-1.png" class="w-full" alt="" />
+                </div>
+            </div>
+            <div class="grid grid-cols-4 gap-5 pt-5 pb-10">
+                <div class="col-span-3 relative">
+                    <div class="swiper-container1 overflow-hidden">
+                        <div class="swiper-wrapper pb-5">
+                            <div class="swiper-slide">
+                                <img src="./assets/headlines-4.png" class="w-full" alt="" />
+                                <a href="">
+                                    <h3 class="font-bold line-clamp-2 hover:text-molistar-red">
+                                        Phía Ngọc Trinh lên tiếng giữa drama dùng ảnh 'pha ke' và
+                                        đội giá trên trời khi pass đồ hiệu
+                                    </h3>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="./assets/headlines-5.png" class="w-full" alt="" />
+                                <a href="">
+                                    <h3 class="font-bold line-clamp-2 hover:text-molistar-red">
+                                        Phương Loan, vợ cố nghệ sĩ Chí Tài lại lặng lẽ đi thăm chồng
+                                    </h3>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="./assets/headlines-6.png" class="w-full" alt="" />
+                                <a href="">
+                                    <h3 class="font-bold line-clamp-2 hover:text-molistar-red">
+                                        Cuối cùng thì “Nàng thơ” của Hoàng Dũng đã công khai ảnh đôi
+                                        thừa nhận mối quan hệ
+                                    </h3>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="./assets/headlines-4.png" class="w-full" alt="" />
+                                <a href="">
+                                    <h3 class="font-bold line-clamp-2 hover:text-molistar-red">
+                                        Phía Ngọc Trinh lên tiếng giữa drama dùng ảnh 'pha ke' và
+                                        đội giá trên trời khi pass đồ hiệu
+                                    </h3>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="./assets/headlines-5.png" class="w-full" alt="" />
+                                <a href="">
+                                    <h3 class="font-bold line-clamp-2 hover:text-molistar-red">
+                                        Phương Loan, vợ cố nghệ sĩ Chí Tài lại lặng lẽ đi thăm chồng
+                                    </h3>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="./assets/headlines-6.png" class="w-full" alt="" />
+                                <a href="">
+                                    <h3 class="font-bold line-clamp-2 hover:text-molistar-red">
+                                        Cuối cùng thì “Nàng thơ” của Hoàng Dũng đã công khai ảnh đôi
+                                        thừa nhận mối quan hệ
+                                    </h3>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-row justify-between z-10">
+                            <div class="cursor-pointer" onclick="swiper.slidePrev()"><i
+                                    class="fas fa-chevron-left bg-molistar-grey p-4 text-white rounded-lg"></i></div>
+                            <div class="cursor-pointer" onclick="swiper.slideNext()"><i
+                                    class="fas fa-chevron-right bg-molistar-red p-4 text-white rounded-lg"></i></div>
+                        </div>
+                        <div class="swiper-pagination -pt-10" style="z-index:-1"></div>
+                    </div>
+                </div>
+                <div class="pb-10 w-full">
+                    <img src="./assets/sideads-2.png" class="w-full" alt="" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- posts -->
+    <section class="container mx-auto grid grid-cols-4 gap-5">
+        <div class="col-span-3 border-t-2 border-b-2 flex flex-col gap-5 py-10">
+            <div class="flex flex-row gap-5 justify-center items-center">
+                <div class="w-5/12">
+                    <a href=""><img src="./assets/news1.png" class="w-full h-full" alt=""></a>
+                </div>
+                <div class="w-8/12 flex flex-col justify-around gap-4">
+                    <a href="">
+                        <h3 class="font-bold text-xl hover:text-molistar-red line-clamp-2">Chúng Ta Của Hiện Tại và R&B
+                            All Night khác nhau như thế nào?</h3>
+                    </a>
+                    <a href="">
+                        <p class=" line-clamp-2 hover:text-molistar-red">Có vòng hòa thanh và cấu trúc tương đồng, Chúng
+                            Ta Của Hiện Tại và R&B All Night”có gì khác nhau?</p>
+                    </a>
+                    <a href="">
+                        <p class="font-bold text-molistar-red">V-POP</p>
+                    </a>
+                </div>
+            </div>
+            <div class="flex flex-row gap-5 justify-center items-center">
+                <div class="w-5/12">
+                    <a href=""><img src="./assets/news2.png" class="w-full h-full" alt=""></a>
+                </div>
+                <div class="w-8/12 flex flex-col justify-around gap-4">
+                    <a href="">
+                        <h3 class="font-bold text-xl hover:text-molistar-red line-clamp-2">Sau nghi vấn Sơn Tùng đạo
+                            nhạc, nhạc sĩ Nguyễn Văn Chung có bình luận "ca sĩ bất chấp đúng sai" gây chú ý</h3>
+                    </a>
+                    <a href="">
+                        <p class=" line-clamp-2 hover:text-molistar-red">Dòng bình luận của nhạc sĩ Nguyễn Văn Chung sau
+                            những ồn ào xoay quanh nghi vấn Sơn Tùng M-TP đạo nhạc đã nhanh chóng được chia sẻ...</p>
+                    </a>
+                    <a href="">
+                        <p class="font-bold text-molistar-red">V-POP</p>
+                    </a>
+                </div>
+            </div>
+            <div class="flex flex-row gap-5 justify-center items-center">
+                <div class="w-5/12">
+                    <a href=""><img src="./assets/news3.png" class="w-full h-full" alt=""></a>
+                </div>
+                <div class="w-8/12 flex flex-col justify-around gap-4">
+                    <a href="">
+                        <h3 class="font-bold text-xl hover:text-molistar-red line-clamp-2">Producer bản beat Lucky tung
+                            video mix giai điệu Có Chắc Yêu Là Đây,khẳng định Sơn Tùng M-TP đạo nhạc?</h3>
+                    </a>
+                    <a href="">
+                        <p class=" line-clamp-2 hover:text-molistar-red">Chủ tài khoản kênh YouTube sở hữu bản beat
+                            Lucky đã đăng tải video giai điệu ca khúc Có Chắc Yêu Là Đây của Sơn Tùng M-TP nhằm khẳng
+                            định...</p>
+                    </a>
+                    <a href="">
+                        <p class="font-bold text-molistar-red">V-POP</p>
+                    </a>
+                </div>
+            </div>
+            <div class="flex flex-row gap-5 justify-center items-center">
+                <div class="w-5/12">
+                    <a href=""><img src="./assets/news4.png" class="w-full h-full" alt=""></a>
+                </div>
+                <div class="w-8/12 flex flex-col justify-around gap-4">
+                    <a href="">
+                        <h3 class="font-bold text-xl hover:text-molistar-red line-clamp-2">Biểu cảm cực yêu của con gái
+                            Đông Nhi khi lần đầu diện áo dài đón Tết</h3>
+                    </a>
+                    <a href="">
+                        <p class=" line-clamp-2 hover:text-molistar-red">Nữ ca sĩ và ông xã năm nay không còn khung ảnh
+                            tình tứ bên nhau mà một thành viên nhí đã có thể xen chính giữa ba mẹ.</p>
+                    </a>
+                    <a href="">
+                        <p class="font-bold text-molistar-red">V-POP</p>
+                    </a>
+                </div>
+            </div>
+            <div class="flex flex-row gap-5 justify-center items-center">
+                <div class="w-5/12">
+                    <a href=""><img src="./assets/news5.png" class="w-full h-full" alt=""></a>
+                </div>
+                <div class="w-8/12 flex flex-col justify-around gap-4">
+                    <a href="">
+                        <h3 class="font-bold text-xl hover:text-molistar-red line-clamp-2">"Bộ tứ drama" Vpop có gì:
+                            ViruSs có hit trăm triệu view, Trang Pháp - Bình Gold cũng "không vừa" ...</h3>
+                    </a>
+                    <a href="">
+                        <p class=" line-clamp-2 hover:text-molistar-red">ViruSs, Bình Gold, Trang Pháp và Phí Phương Anh
+                            những ngày qua là tâm điểm drama của showbiz. Nếu so kè sự nghiệp thì ai đang là "trùm
+                            cuối"?</p>
+                    </a>
+                    <a href="">
+                        <p class="font-bold text-molistar-red">V-POP</p>
+                    </a>
+                </div>
+            </div>
+            <div class="flex flex-row gap-5 justify-center items-center">
+                <div class="w-5/12">
+                    <a href=""><img src="./assets/news6.png" class="w-full h-full" alt=""></a>
+                </div>
+                <div class="w-8/12 flex flex-col justify-around gap-4">
+                    <a href="">
+                        <h3 class="font-bold text-xl hover:text-molistar-red line-clamp-2">Động thái Sơn Tùng M-TP ấn
+                            like ảnh của một nam rapper nhanh chóng được các fan bắt trọn.</h3>
+                    </a>
+                    <a href="">
+                        <p class=" line-clamp-2 hover:text-molistar-red">Vừa qua, anh chàng rapper MCK khiến cho cộng
+                            đồng mạng không khỏi thích thú khi đăng tải tâm trạng "buồn", "dỗi" lên trang cá nhân.</p>
+                    </a>
+                    <a href="">
+                        <p class="font-bold text-molistar-red">V-POP</p>
+                    </a>
+                </div>
+            </div>
+            <div class="flex justify-center pt-5">
+                <button
+                    class="font-bold text-molistar-red py-4 px-8 rounded-full border-2 border-molistar-red hover:bg-molistar-red hover:text-white transition-all duration-150">XEM
+                    THÊM <i class="fas fa-arrow-down"></i></button>
+            </div>
+        </div>
+        <div class="col-span-1 w-full">
+            <div class="w-full">
+                <img src="./assets/sideads-1.png" class="w-full" alt="">
+            </div>
+            <div class="w-full">
+                <img src="./assets/sideads-2.png" class="w-full" alt="">
+            </div>
+        </div>
+    </section>
+    <!-- COMMUNITY -->
+    <section class="py-10">
+        <div class="container mx-auto relative">
+            <div class="absolute flex gap-2 py-4 px-6 text-2xl category">
+                <img src="./assets/icon-group.svg" alt="" />
+                <span class="font-bold text-white">CỘNG ĐỒNG NỔI BẬT</span>
+            </div>
+            <div onclick="commSwiper.slidePrev()"
+                class="absolute left-0 mt-7 -ml-11 h-full flex justify-center items-center cursor-pointer">
+                <i class="fas fa-chevron-left bg-black text-white p-4 rounded-lg"></i>
+            </div>
+            <div onclick="commSwiper.slideNext()"
+                class="absolute right-0 mt-7 -mr-11 h-full flex justify-center items-center cursor-pointer">
+                <i class="fas fa-chevron-right bg-white text-molistar-red p-4 rounded-lg shadow-md"></i>
+            </div>
+            <div class="swiper-container-community pt-24 overflow-hidden">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide flex flex-col items-center">
+                        <a href=""><img src="./assets/comm-tho7mau.png" alt="" /></a>
+                        <a href="">
+                            <p class="font-bold pt-5 hover:text-molistar-red">THỎ 7 MÀU</p>
+                        </a>
+                    </div>
+                    <div class="swiper-slide flex flex-col items-center">
+                        <a href="">
+                            <img src="./assets/comm-tuyetbitch.png" alt="" />
+                        </a>
+                        <a href="">
+                            <p class="font-bold pt-5 flex flex-col items-center hover:text-molistar-red">
+                                TUYẾT BITCH
+                            </p>
+                        </a>
+                    </div>
+                    <div class="swiper-slide flex flex-col items-center">
+                        <a href=""><img src="./assets/comm-welax.png" alt="" /></a>
+                        <a href="">
+                            <p class="font-bold pt-5 flex flex-col items-center hover:text-molistar-red">WELAX</p>
+                        </a>
+                    </div>
+                    <div class="swiper-slide flex flex-col items-center">
+                        <a href=""><img src="./assets/comm-giadinhngo.png" alt="" /></a>
+                        <a href="">
+                            <p class="font-bold pt-5 hover:text-molistar-red">GIA ĐÌNH NGỐ</p>
+                        </a>
+                    </div>
+                    <div class="swiper-slide flex flex-col items-center">
+                        <a href=""><img src="./assets/comm-camchamchi.png" alt="" /></a>
+                        <a href="">
+                            <p class="font-bold pt-5 hover:text-molistar-red">CẢM CHĂM CHỈ</p>
+                        </a>
+                    </div>
+                    <div class="swiper-slide flex flex-col items-center">
+                        <a href=""><img src="./assets/comm-tuzki.png" alt="" /></a>
+                        <a href="">
+                            <p class="font-bold pt-5 hover:text-molistar-red">TUZKI VIỆT NAM</p>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <section class="bg-molistar-darkgrey">
+        <div class="container mx-auto">
+            <div class="flex justify-between pt-10">
+                <div>
+                    <img src="./assets/footer-logo.png" alt="" />
+                    <p class="text-lg text-white font-bold pt-5">
+                        MOLI STAR - Kết nối STAR đến gần hơn với FAN
+                    </p>
+                </div>
+                <div class="flex gap-5">
+                    <img src="./assets/icon-facebook.svg" alt="" />
+                    <img src="./assets/icon-youtube.svg" alt="" />
+                    <img src="./assets/icon-instagram.svg" alt="" />
+                </div>
+            </div>
+            <div class="grid grid-cols-7 py-10 border-b-2 border-black">
+                <div>
+                    <ul class="text-white font-bold">
+                        <li class="hover:text-molistar-red"><a href="">MOLI SPECIAL</a></li>
+                        <li class="hover:text-molistar-red"><a href="">MOLI STAR</a></li>
+                        <li class="hover:text-molistar-red"><a href="">STAR TALK</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <a href=""><span class="text-white border-b-2 border-molistar-red pb-1">STAR</span></a>
+                    <ul class="text-gray-300 pt-5">
+                        <li class="hover:text-molistar-red"><a href="">Hậu trường</a></li>
+                        <li class="hover:text-molistar-red"><a href="">Paparazi</a></li>
+                        <li class="hover:text-molistar-red"><a href="">TV Shows</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <a href=""><span class="text-white border-b-2 border-molistar-red pb-1">CINE</span></a>
+                    <ul class="text-gray-300 pt-5">
+                        <li class="hover:text-molistar-red"><a href="">Điện ảnh</a></li>
+                        <li class="hover:text-molistar-red"><a href="">Truyền hình</a></li>
+                        <li class="hover:text-molistar-red"><a href="">Web drama</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <a href=""><span class="text-white border-b-2 border-molistar-red pb-1">MUSIC</span></a>
+                    <ul class="text-gray-300 pt-5">
+                        <li class="hover:text-molistar-red"><a href="">V-POP</a></li>
+                        <li class="hover:text-molistar-red"><a href="">K-POP</a></li>
+                        <li class="hover:text-molistar-red"><a href="">Âu Mỹ</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <a href=""><span class="text-white border-b-2 border-molistar-red pb-1">FASHION</span></a>
+                    <ul class="text-gray-300 pt-5">
+                        <li class="hover:text-molistar-red"><a href="">Trends</a></li>
+                        <li class="hover:text-molistar-red"><a href="">Beauty</a></li>
+                        <li class="hover:text-molistar-red"><a href="">Streetstyle</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <a href=""><span class="text-white border-b-2 border-molistar-red pb-1">ĐỜI SỐNG</span></a>
+                    <ul class="text-gray-300 pt-5">
+                        <li class="hover:text-molistar-red"><a href="">Nhân vật</a></li>
+                        <li class="hover:text-molistar-red"><a href="">Ăn chơi</a></li>
+                        <li class="hover:text-molistar-red"><a href="">Du lịch</a></li>
+                        <li class="hover:text-molistar-red"><a href="">"Giang cư mận"</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <a href=""><span class="text-white border-b-2 border-molistar-red pb-1">THỂ THAO</span></a>
+                    <ul class="text-gray-300 pt-5">
+                        <li class="hover:text-molistar-red"><a href="">Nhân vật</a></li>
+                        <li class="hover:text-molistar-red"><a href="">Bản lề</a></li>
+                        <li class="hover:text-molistar-red"><a href="">Bóng đá</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="grid grid-cols-3 py-8 border-b-2 border-black">
+                <div class="flex flex-col gap-3">
+                    <p class="text-gray-400">TỔNG BIÊN TẬP</p>
+                    <p class="text-white">Nguyễn Quang Minh</p>
+                </div>
+                <div class="flex flex-col gap-3">
+                    <p class="text-gray-400">PHÓ TỔNG BIÊN TẬP</p>
+                    <p class="text-white">Vũ Thị Tuyết Vân - Trương Thụy Tường Vy</p>
+                </div>
+                <div class="flex flex-col gap-3">
+                    <p class="text-gray-400">CHỊU TRÁCH NHIỆM NỘI DUNG</p>
+                    <p class="text-white">Đỗ Thu Trang</p>
+                </div>
+            </div>
+            <div class="flex justify-between py-8">
+                <div>
+                    <p class="text-white">© MOLI STAR - CTY CỔ PHẦN MOLI GROUP</p>
+                    <p class="text-gray-400">Phone: 028 3535 0969</p>
+                    <p class="text-gray-400">Email: hello@molistar.com</p>
+                </div>
+                <div class="flex justify-between gap-5">
+                    <div>
+                        <p class="text-white">HỢP TÁC NỘI DUNG</p>
+                        <p class="text-gray-400">info@molistar.com</p>
+                    </div>
+                    <div>
+                        <p class="text-white">HỢP TÁC QUẢNG CÁO</p>
+                        <p class="text-gray-400">marketing@molistar.com</p>
+                        <p class="text-gray-400">0912 345 678</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bg-black">
+            <div class="container mx-auto flex justify-center p-2">
+                <span class="text-white">Giấy phép Tạp chí điện tử Molistar số: 13/GP-BTTTT do Bộ Thông tin &
+                    Truyền
+                    Thông cấp ngày 11/01/2016</span>
+            </div>
+        </div>
+    </section>
+</body>
+<script src="./lib/swiper-bundle.js"></script>
+<script src="./lib/swiper-bundle.min.js"></script>
+<script src="./scripts.js"></script>
+
+</html>

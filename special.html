@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./stylesheet/index.css" />
+    <link rel="stylesheet" href="./stylesheet/special.css" />
+    <link href="./lib/font-awesome-pro-5.15.2/css/all.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="./lib/swiper/swiper-bundle.css" />
+    <link rel="stylesheet" href="./lib/swiper/swiper-bundle.min.css" />
+
+    <title>Molistar</title>
+</head>
+
+<body class="overflow-x-hidden">
+    <!-- Trending -->
+    <section class="fixed top-0 bg-molistar-red w-full z-50">
+        <div class="container mx-auto">
+            <div class="flex justify-between items-center">
+                <div class="flex gap-5 items-center justify-center py-2 text-xs">
+                    <img src="./assets/icon-trending-up.svg" alt="" />
+                    <p
+                        class="rounded-full border-2 p-1 px-2 text-white hover:text-molistar-red hover:bg-white transition duration 150 cursor-pointer">
+                        #Bố già 2021
+                    </p>
+                    <p
+                        class="rounded-full border-2 p-1 px-2 text-white hover:text-molistar-red hover:bg-white transition duration 150 cursor-pointer">
+                        #Đại hội pass đồ bạc tỉ của Ngọc Trinh
+                    </p>
+                </div>
+                <div class="flex gap-2 text-xs">
+                    <div
+                        class="flex gap-2 items-center p-3 group hover:bg-black hover:text-white transition-all duration-150">
+                        <img src="./assets/icon-bookmark-heart.svg" alt="" />
+                        <a href="./special.html" class="font-bold text-white">MOLI SPECIAL</a>
+                    </div>
+                    <div
+                        class="flex gap-2 items-center p-3 group hover:bg-black hover:text-white transition-all duration-150">
+                        <img src="./assets/icon-star.svg" alt="" />
+                        <a href="" class="font-bold text-white">MOLI STAR</a>
+                    </div>
+                    <div
+                        class="flex gap-2 items-center p-3 group hover:bg-black hover:text-white transition-all duration-150">
+                        <img src="./assets/icon-hot.svg" alt="" />
+                        <a href="" class="font-bold text-white">TIN HOT</a>
+                    </div>
+                    <div
+                        class="flex gap-2 items-center p-3 group hover:bg-black hover:text-white transition-all duration-150">
+                        <img src="./assets/icon-news.svg" alt="" />
+                        <a href="" class="font-bold text-white">TIN MỚI</a>
+                    </div>
+                    <div class="flex items-center relative">
+                        <input id="searchBar" type="text" class="absolute mt-7">
+                        <img class="cursor-pointer" onclick="searchToggle()" src="./assets/icon-search.svg" alt="" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bg-white p-4">
+            <div class="container mx-auto">
+                <div class="flex gap-5 items-center justify-between">
+                    <a href="./index.html"><img src="./assets/logo.png" alt="" /></a>
+                    <a href="" class="font-bold text-xl hover:text-molistar-red transition duration-150"><span
+                            class="text-base transform transition-all duration-150 hover:border-b-2 hover:border-molistar-red">STAR</span></a>
+                    <a href="" class="font-bold text-xl hover:text-molistar-red transition duration-150"><span
+                            class="text-base transform transition-all duration-150 hover:border-b-2 hover:border-molistar-red">CINE</span></a>
+                    <a href="./music.html"
+                        class="font-bold text-xl hover:text-molistar-red transition duration-150"><span
+                            class="text-base transform transition-all duration-150 hover:border-b-2 hover:border-molistar-red">MUSIC</span></a>
+                    <a href="" class="font-bold text-xl hover:text-molistar-red transition duration-150"><span
+                            class="text-base transform transition-all duration-150 hover:border-b-2 hover:border-molistar-red">FASHION</span></a>
+                    <a href="./startalk.html"
+                        class="font-bold text-xl hover:text-molistar-red transition duration-150"><span
+                            class="text-base transform transition-all duration-150 hover:border-b-2 hover:border-molistar-red">STAR
+                            TALK</span></a>
+                    <a href="" class="font-bold text-xl hover:text-molistar-red transition duration-150"><span
+                            class="text-base transform transition-all duration-150 hover:border-b-2 hover:border-molistar-red">ĐỜI
+                            SỐNG</span></a>
+                    <a href="" class="font-bold text-xl hover:text-molistar-red transition duration-150"><span
+                            class="text-base transform transition-all duration-150 hover:border-b-2 hover:border-molistar-red">THỂ
+                            THAO</span></a>
+                    <button><img onclick="dropdownToggle()" src="./assets/icon-red-3dots.svg" alt="" /></button>
+                </div>
+
+            </div>
+
+        </div>
+        <!-- dropdown -->
+        <section class="bg-molistar-darkgrey" id="dropdown">
+            <div class="container mx-auto">
+                <div class="grid grid-cols-7 py-10 border-b-2 border-black">
+                    <div>
+                        <ul class="text-white font-bold">
+                            <li>MOLI SPECIAL</li>
+                            <li>MOLI STAR</li>
+                            <li>STAR TALK</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <span class="text-white border-b-2 border-molistar-red pb-1">STAR</span>
+                        <ul class="text-gray-300 pt-5">
+                            <li>Hậu trường</li>
+                            <li>Paparazi</li>
+                            <li>TV Shows</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <span class="text-white border-b-2 border-molistar-red pb-1">CINE</span>
+                        <ul class="text-gray-300 pt-5">
+                            <li>Điện ảnh</li>
+                            <li>Truyền hình</li>
+                            <li>Web drama</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <span class="text-white border-b-2 border-molistar-red pb-1">MUSIC</span>
+                        <ul class="text-gray-300 pt-5">
+                            <li>V-POP</li>
+                            <li>K-POP</li>
+                            <li>Âu Mỹ</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <span class="text-white border-b-2 border-molistar-red pb-1">FASHION</span>
+                        <ul class="text-gray-300 pt-5">
+                            <li>Trends</li>
+                            <li>Beauty</li>
+                            <li>Streetstyle</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <span class="text-white border-b-2 border-molistar-red pb-1">ĐỜI SỐNG</span>
+                        <ul class="text-gray-300 pt-5">
+                            <li>Nhân vật</li>
+                            <li>Ăn chơi</li>
+                            <li>Du lịch</li>
+                            <li>"Giang cư mận"</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <span class="text-white border-b-2 border-molistar-red pb-1">THỂ THAO</span>
+                        <ul class="text-gray-300 pt-5">
+                            <li>Nhân vật</li>
+                            <li>Bản lề</li>
+                            <li>Bóng đá</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="flex justify-between py-8 w-full">
+                    <div class="flex flex-row items-center justify-center gap-5">
+                        <img src="./assets/footer-logo.png" class="w-full" alt="">
+
+                        <div class="p-2">
+                            <p class="text-white pr-4">HỢP TÁC NỘI DUNG</p>
+                            <p class="text-gray-400"> info@molistar.com</p>
+                        </div>
+                        <div>
+                            <p class="text-white">HỢP TÁC QUẢNG CÁO</p>
+                            <p class="text-gray-400">marketing@molistar.com</p>
+                            <p class="text-gray-400">0912 345 678</p>
+
+                        </div>
+                    </div>
+                    <div class="flex gap-5">
+                        <img src="./assets/icon-facebook.svg" alt="">
+                        <img src="./assets/icon-youtube.svg" alt="">
+                        <img src="./assets/icon-instagram.svg" alt="">
+                    </div>
+                </div>
+        </section>
+    </section>
+
+    <!-- breadcrum -->
+    <section class="pt-32" id="molispecial-breadcrum">
+        <div class="container mx-auto -mb-72 pt-10 relative">
+            <div class="flex justify-center w-full">
+                <span id="molispecial-text" class="text-4xl font-bold text-white">MOLI <span
+                        class="text-molistar-red">SPECIAL</span></span>
+            </div>
+            <div class="cursor-pointer absolute h-full flex justify-center items-center -left-16"
+                onclick="specialSwiper.slidePrev()">
+                <i class="fas fa-chevron-left bg-black text-white  px-4 py-3 rounded-lg"></i>
+            </div>
+            <div class="cursor-pointer absolute h-full -right-16 flex justify-center items-center"
+                onclick="specialSwiper.slideNext()">
+                <i class="fas fa-chevron-right bg-white text-molistar-red px-4 py-3 rounded-lg shadow-xl"></i>
+            </div>
+            <div class="swiper-container-special relative w-full pt-20">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="./assets/molispecial-banner-1.png" class="w-full" alt="">
+                    </div>
+
+                    <div class="swiper-slide">
+                        <img src="./assets/molispecial-banner-2.png" class="w-full" alt="">
+                    </div>
+                </div>
+                <div class="swiper-scrollbar ml-96 pr-10"></div>
+            </div>
+        </div>
+    </section>
+    <!-- 4 post -->
+    <section id="molispecial-post-bg" class="pt-72">
+        <div class="container mx-auto pt-5 ">
+            <div class="grid grid-cols-2 grid-rows-2 gap-5">
+                <div class="flex flex-col gap-5">
+                    <a href=""><img src="./assets/posts/720x400_eede936a-6504-42c5-96a9-038c12c1ca0a 1.png" alt=""></a>
+                    <a href=""><span class="hover:text-molistar-red font-bold text-2xl">Dink: Hợp thời hay ích
+                            kỷ</span></a>
+                </div>
+                <div class="flex flex-col gap-5">
+                    <a href=""><img src="./assets/posts/720x400_bd2cac5f-079b-4e80-bf53-b7a46ac24208 1.png" alt=""></a>
+                    <a href=""><span class="hover:text-molistar-red font-bold text-2xl">Baifern Pimchanok: Giành lại
+                            ngôi vị “nàng thơ” màn ảnh Thái</span></a>
+                </div>
+                <div class="flex flex-col gap-5">
+                    <a href=""><img src="./assets/posts/720x400_eede936a-6504-42c5-96a9-038c12c1ca0a 2.png" alt=""></a>
+                    <a href=""><span class="hover:text-molistar-red font-bold text-2xl">Juky San: Hôm nay phải tốt hơn
+                            hôm qua</span></a>
+                </div>
+                <div class="flex flex-col gap-5">
+                    <a href=""><img src="./assets/posts/720x400_bd2cac5f-079b-4e80-bf53-b7a46ac24208 2.png" alt=""></a>
+                    <a href=""><span class="hover:text-molistar-red font-bold text-2xl">Võ Hạ Trâm: Lúc thử thai thấy
+                            hai vạch, tôi khóc như một đứa trẻ</span></a>
+                </div>
+            </div>
+            <div class="pt-5 grid grid-cols-3 grid-rows-2 gap-5">
+                <div class="flex flex-col gap-5">
+                    <a href=""><img src="./assets/posts/720x400_6276ba7c-c1d4-4cad-90c2-05eb9d685800 1.png" alt=""></a>
+                    <a href=""><span class="hover:text-molistar-red font-bold text-xl line-clamp-2">Ứng xử trên mạng xã
+                            hội: Bạn là
+                            nghệ sĩ hay... Gen Z?</span></a>
+                </div>
+                <div class="flex flex-col gap-5">
+                    <a href=""><img src="./assets/posts/720x400_aa0c5e61-950a-4ea9-8b24-66b9c155d38f 1.png" alt=""></a>
+                    <a href=""><span class="hover:text-molistar-red font-bold text-xl line-clamp-2">Nơi niềm tự hào Việt
+                            được lan
+                            tỏa</span></a>
+                </div>
+                <div class="flex flex-col gap-5">
+                    <a href=""><img src="./assets/posts/720x400_f419285c-c300-4a52-9f19-49a7a1c21e39 1.png" alt=""></a>
+                    <a href=""><span class="hover:text-molistar-red font-bold text-xl line-clamp-2">Làm từ thiện: Thế
+                            nào mới là
+                            đúng?</span></a>
+                </div>
+                <div class="flex flex-col gap-5">
+                    <a href=""><img src="./assets/posts/720x400_6276ba7c-c1d4-4cad-90c2-05eb9d685800 2.png" alt=""></a>
+                    <a href=""><span class="hover:text-molistar-red font-bold text-xl line-clamp-2">NTK VUNGOC&SON: Bậc
+                            thầy “dạo
+                            chơi” giữa bữa tiệc sắc màu, 'thổi hồn' thời trang văn hoá Việt</span></a>
+                </div>
+                <div class="flex flex-col gap-5">
+                    <a href=""><img src="./assets/posts/720x400_aa0c5e61-950a-4ea9-8b24-66b9c155d38f 2.png" alt=""></a>
+                    <a href=""><span class="hover:text-molistar-red font-bold text-xl line-clamp-2">Người hùng Nguyễn
+                            Ngọc Mạnh: Khi
+                            người cha khoác lên mình chiếc áo giáp của anh hùng</span></a>
+                </div>
+                <div class="flex flex-col gap-5">
+                    <a href=""><img src="./assets/posts/720x400_f419285c-c300-4a52-9f19-49a7a1c21e39 2.png" alt=""></a>
+                    <a href=""><span class="hover:text-molistar-red font-bold text-xl line-clamp-2">Nghệ sĩ Mạc Can: Cả
+                            đời nặng
+                            gánh nghệ thuật, "mắc nợ" văn chương</span></a>
+                </div>
+            </div>
+            <div class="flex justify-center py-5">
+                <button
+                    class="font-bold text-molistar-red py-4 px-8 rounded-full border-2 border-molistar-red hover:bg-molistar-red hover:text-white transition-all duration-150">XEM
+                    THÊM <i class="fas fa-arrow-down"></i></button>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <section class="bg-molistar-darkgrey">
+        <div class="container mx-auto">
+            <div class="flex justify-between pt-10">
+                <div>
+                    <img src="./assets/footer-logo.png" alt="" />
+                    <p class="text-lg text-white font-bold pt-5">
+                        MOLI STAR - Kết nối STAR đến gần hơn với FAN
+                    </p>
+                </div>
+                <div class="flex gap-5">
+                    <img src="./assets/icon-facebook.svg" alt="" />
+                    <img src="./assets/icon-youtube.svg" alt="" />
+                    <img src="./assets/icon-instagram.svg" alt="" />
+                </div>
+            </div>
+            <div class="grid grid-cols-7 py-10 border-b-2 border-black">
+                <div>
+                    <ul class="text-white font-bold">
+                        <li class="hover:text-molistar-red"><a href="">MOLI SPECIAL</a></li>
+                        <li class="hover:text-molistar-red"><a href="">MOLI STAR</a></li>
+                        <li class="hover:text-molistar-red"><a href="">STAR TALK</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <a href=""><span class="text-white border-b-2 border-molistar-red pb-1">STAR</span></a>
+                    <ul class="text-gray-300 pt-5">
+                        <li class="hover:text-molistar-red"><a href="">Hậu trường</a></li>
+                        <li class="hover:text-molistar-red"><a href="">Paparazi</a></li>
+                        <li class="hover:text-molistar-red"><a href="">TV Shows</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <a href=""><span class="text-white border-b-2 border-molistar-red pb-1">CINE</span></a>
+                    <ul class="text-gray-300 pt-5">
+                        <li class="hover:text-molistar-red"><a href="">Điện ảnh</a></li>
+                        <li class="hover:text-molistar-red"><a href="">Truyền hình</a></li>
+                        <li class="hover:text-molistar-red"><a href="">Web drama</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <a href=""><span class="text-white border-b-2 border-molistar-red pb-1">MUSIC</span></a>
+                    <ul class="text-gray-300 pt-5">
+                        <li class="hover:text-molistar-red"><a href="">V-POP</a></li>
+                        <li class="hover:text-molistar-red"><a href="">K-POP</a></li>
+                        <li class="hover:text-molistar-red"><a href="">Âu Mỹ</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <a href=""><span class="text-white border-b-2 border-molistar-red pb-1">FASHION</span></a>
+                    <ul class="text-gray-300 pt-5">
+                        <li class="hover:text-molistar-red"><a href="">Trends</a></li>
+                        <li class="hover:text-molistar-red"><a href="">Beauty</a></li>
+                        <li class="hover:text-molistar-red"><a href="">Streetstyle</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <a href=""><span class="text-white border-b-2 border-molistar-red pb-1">ĐỜI SỐNG</span></a>
+                    <ul class="text-gray-300 pt-5">
+                        <li class="hover:text-molistar-red"><a href="">Nhân vật</a></li>
+                        <li class="hover:text-molistar-red"><a href="">Ăn chơi</a></li>
+                        <li class="hover:text-molistar-red"><a href="">Du lịch</a></li>
+                        <li class="hover:text-molistar-red"><a href="">"Giang cư mận"</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <a href=""><span class="text-white border-b-2 border-molistar-red pb-1">THỂ THAO</span></a>
+                    <ul class="text-gray-300 pt-5">
+                        <li class="hover:text-molistar-red"><a href="">Nhân vật</a></li>
+                        <li class="hover:text-molistar-red"><a href="">Bản lề</a></li>
+                        <li class="hover:text-molistar-red"><a href="">Bóng đá</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="grid grid-cols-3 py-8 border-b-2 border-black">
+                <div class="flex flex-col gap-3">
+                    <p class="text-gray-400">TỔNG BIÊN TẬP</p>
+                    <p class="text-white">Nguyễn Quang Minh</p>
+                </div>
+                <div class="flex flex-col gap-3">
+                    <p class="text-gray-400">PHÓ TỔNG BIÊN TẬP</p>
+                    <p class="text-white">Vũ Thị Tuyết Vân - Trương Thụy Tường Vy</p>
+                </div>
+                <div class="flex flex-col gap-3">
+                    <p class="text-gray-400">CHỊU TRÁCH NHIỆM NỘI DUNG</p>
+                    <p class="text-white">Đỗ Thu Trang</p>
+                </div>
+            </div>
+            <div class="flex justify-between py-8">
+                <div>
+                    <p class="text-white">© MOLI STAR - CTY CỔ PHẦN MOLI GROUP</p>
+                    <p class="text-gray-400">Phone: 028 3535 0969</p>
+                    <p class="text-gray-400">Email: hello@molistar.com</p>
+                </div>
+                <div class="flex justify-between gap-5">
+                    <div>
+                        <p class="text-white">HỢP TÁC NỘI DUNG</p>
+                        <p class="text-gray-400">info@molistar.com</p>
+                    </div>
+                    <div>
+                        <p class="text-white">HỢP TÁC QUẢNG CÁO</p>
+                        <p class="text-gray-400">marketing@molistar.com</p>
+                        <p class="text-gray-400">0912 345 678</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bg-black">
+            <div class="container mx-auto flex justify-center p-2">
+                <span class="text-white">Giấy phép Tạp chí điện tử Molistar số: 13/GP-BTTTT do Bộ Thông tin &
+                    Truyền
+                    Thông cấp ngày 11/01/2016</span>
+            </div>
+        </div>
+    </section>
+</body>
+<script src="./lib/swiper-bundle.js"></script>
+<script src="./lib/swiper-bundle.min.js"></script>
+<script src="./scripts.js"></script>
+
+</html>
